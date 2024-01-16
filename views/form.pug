@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    div.wrapper
+        h1=title 
+        form.messageForm(action="/new", method="post") 
+            label(for="user") user 
+                input#user(type="text", name="user",required=true,)
+            label(for="text") text
+                textarea#text(name="text",required=true, cols="30", rows="5", )  
+            div#btnDiv
+                button#sendBtn(type="submit") send message
+        a(href="/") home
